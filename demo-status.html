@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Marketplace - Demo Status</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-card.running {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+        .service-card.stopped {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+        .service-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .service-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .status-running {
+            background: #28a745;
+            color: white;
+        }
+        .status-stopped {
+            background: #dc3545;
+            color: white;
+        }
+        .status-checking {
+            background: #ffc107;
+            color: #333;
+        }
+        .service-url {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .service-url:hover {
+            text-decoration: underline;
+        }
+        .actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        .btn-success:hover {
+            background: #218838;
+        }
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .info-box h3 {
+            color: #1976D2;
+            margin-bottom: 10px;
+        }
+        .info-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        .info-box li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AI Model Marketplace</h1>
+        <p class="subtitle">Demo Status Dashboard</p>
+
+        <div class="services">
+            <div class="service-card" id="frontend-card">
+                <div class="service-name">Frontend (React)</div>
+                <span class="service-status status-checking" id="frontend-status">Checking...</span>
+                <div>
+                    <a href="http://localhost:5173" target="_blank" class="service-url">http://localhost:5173</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="backend-card">
+                <div class="service-name">Backend API (Node.js)</div>
+                <span class="service-status status-checking" id="backend-status">Checking...</span>
+                <div>
+                    <a href="http://localhost:3000/health" target="_blank" class="service-url">http://localhost:3000/health</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="fingerprint-card">
+                <div class="service-name">Fingerprinting Service (Python)</div>
+                <span class="service-status status-checking" id="fingerprint-status">Checking...</span>
+                <div>
+                    <a href="http://localhost:5000/health" target="_blank" class="service-url">http://localhost:5000/health</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="http://localhost:5173" target="_blank" class="btn btn-primary">Open Frontend</a>
+            <a href="http://localhost:3000/health" target="_blank" class="btn btn-success">Test Backend API</a>
+            <a href="http://localhost:5000/health" target="_blank" class="btn btn-success">Test Fingerprinting</a>
+            <button class="btn btn-primary" onclick="checkAll()">Refresh Status</button>
+        </div>
+
+        <div class="info-box">
+            <h3>📋 Quick Start Guide</h3>
+            <ul>
+                <li><strong>Frontend:</strong> Main application UI - Browse marketplace, upload models</li>
+                <li><strong>Backend API:</strong> REST API for models, users, licenses, marketplace</li>
+                <li><strong>Fingerprinting:</strong> AI model verification and plagiarism detection</li>
+                <li>All services must be running for full functionality</li>
+                <li>Check terminal windows for service status and logs</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        async function checkService(url, statusId, cardId) {
+            try {
+                const response = await fetch(url, { 
+                    method: 'GET',
+                    mode: 'no-cors' // Bypass CORS for status check
+                });
+                const statusEl = document.getElementById(statusId);
+                const cardEl = document.getElementById(cardId);
+                
+                // Try to fetch with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 2000);
+                
+                try {
+                    await fetch(url, { 
+                        signal: controller.signal,
+                        mode: 'no-cors'
+                    });
+                    statusEl.textContent = 'Running ✅';
+                    statusEl.className = 'service-status status-running';
+                    cardEl.className = 'service-card running';
+                } catch (e) {
+                    // If no-cors fails, try direct check
+                    fetch(url).then(() => {
+                        statusEl.textContent = 'Running ✅';
+                        statusEl.className = 'service-status status-running';
+                        cardEl.className = 'service-card running';
+                    }).catch(() => {
+                        statusEl.textContent = 'Stopped ❌';
+                        statusEl.className = 'service-status status-stopped';
+                        cardEl.className = 'service-card stopped';
+                    });
+                }
+                clearTimeout(timeoutId);
+            } catch (error) {
+                const statusEl = document.getElementById(statusId);
+                const cardEl = document.getElementById(cardId);
+                statusEl.textContent = 'Stopped ❌';
+                statusEl.className = 'service-status status-stopped';
+                cardEl.className = 'service-card stopped';
+            }
+        }
+
+        function checkAll() {
+            document.getElementById('frontend-status').textContent = 'Checking...';
+            document.getElementById('backend-status').textContent = 'Checking...';
+            document.getElementById('fingerprint-status').textContent = 'Checking...';
+            
+            checkService('http://localhost:5173', 'frontend-status', 'frontend-card');
+            checkService('http://localhost:3000/health', 'backend-status', 'backend-card');
+            checkService('http://localhost:5000/health', 'fingerprint-status', 'fingerprint-card');
+        }
+
+        // Check on load
+        checkAll();
+        
+        // Auto-refresh every 5 seconds
+        setInterval(checkAll, 5000);
+    </script>
+</body>
+</html>
+
