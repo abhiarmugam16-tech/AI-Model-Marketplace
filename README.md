@@ -2,7 +2,7 @@
 
 A secure decentralized marketplace where AI models can be uploaded, verified, licensed, and sold — while preventing model theft and ensuring ownership transparency.
 
-## 🎯 Features
+##  Features
 
 - **Model Registration**: Upload AI models with blockchain-based ownership
 - **Fingerprinting**: Advanced model fingerprinting to prevent plagiarism
@@ -12,7 +12,7 @@ A secure decentralized marketplace where AI models can be uploaded, verified, li
 - **IPFS Storage**: Decentralized storage for model files
 - **Royalty System**: Automatic royalty distribution to creators
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -41,7 +41,7 @@ A secure decentralized marketplace where AI models can be uploaded, verified, li
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -147,7 +147,7 @@ npm run dev
 - Backend API: http://localhost:3000
 - Fingerprinting Service: http://localhost:5000
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -176,7 +176,7 @@ npm run dev
         └── app.py        # Flask API
 ```
 
-## 🔧 Smart Contracts
+##  Smart Contracts
 
 ### AIModelRegistry
 - Model registration and ownership
@@ -221,7 +221,7 @@ npm run dev
 - `POST /api/verification/verify/:modelId` - Verify model
 - `GET /api/verification/similar/:modelId` - Find similar models
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Test contracts
@@ -237,7 +237,7 @@ cd fingerprint-service
 pytest tests/
 ```
 
-## 🔐 Security Considerations
+## Security Considerations
 
 - Private keys should never be committed
 - Use environment variables for sensitive data
@@ -246,23 +246,24 @@ pytest tests/
 - Use HTTPS in production
 - Audit smart contracts before mainnet deployment
 
-## 📝 License
+##  License
 
 MIT License
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
-## 📚 Documentation
+##  Documentation
 
 See `ai_marketplace_data_structures.md` for detailed data structure documentation.
 
-## 🆘 Support
+##  Support
 
 For issues and questions, please open an issue on GitHub.
 
 ---
 
 Built with ❤️ for the decentralized AI economy
+
 
