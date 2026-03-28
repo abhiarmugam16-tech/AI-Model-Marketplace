@@ -264,6 +264,6 @@ For issues and questions, please open an issue on GitHub.
 
 ---
 
-Built with ❤️ for the decentralized AI economy
+Built with for the decentralized AI economy
 
 
