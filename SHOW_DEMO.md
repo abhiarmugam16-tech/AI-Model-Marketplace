@@ -1,6 +1,6 @@
-# 🎬 AI Model Marketplace - Live Demo Guide
+#  AI Model Marketplace - Live Demo Guide
 
-## 🚀 Starting the Demo
+##  Starting the Demo
 
 ### Step 1: Start Fingerprinting Service
 
@@ -31,11 +31,11 @@ npm run dev
 
 **Expected Output:**
 ```
-✅ Database connected (or warning if not set up)
-✅ Redis connected (or warning if not set up)
-✅ Web3 initialized
-✅ IPFS client initialized
-🚀 Server running on port 3000
+Database connected (or warning if not set up)
+Redis connected (or warning if not set up)
+Web3 initialized
+IPFS client initialized
+Server running on port 3000
 ```
 
 **Test it:** Open http://localhost:3000/health in browser
@@ -63,7 +63,7 @@ npm run dev
 
 ---
 
-## 🎯 What You'll See
+## What You'll See
 
 ### Frontend Pages:
 
@@ -97,7 +97,7 @@ npm run dev
 
 ---
 
-## 🧪 Testing the API
+## Testing the API
 
 ### Test Fingerprinting Service:
 
@@ -126,7 +126,7 @@ curl http://localhost:3000/api/models/search/test
 
 ---
 
-## 📸 Expected UI Screenshots Description
+## Expected UI Screenshots Description
 
 ### Home Page
 - **Header**: "AI Model Marketplace" title
@@ -157,7 +157,7 @@ curl http://localhost:3000/api/models/search/test
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Service Won't Start?
 
@@ -202,7 +202,7 @@ Change ports in:
 
 ---
 
-## ✅ Verification Checklist
+## Verification Checklist
 
 - [ ] Fingerprinting service responds at http://localhost:5000/health
 - [ ] Backend API responds at http://localhost:3000/health
@@ -213,27 +213,27 @@ Change ports in:
 
 ---
 
-## 🎉 Success Indicators
+## Success Indicators
 
-✅ **All Services Running:**
+ **All Services Running:**
 - 3 terminal windows showing running services
 - No error messages
 - Health endpoints return OK
 
-✅ **Frontend Working:**
+**Frontend Working:**
 - Page loads without errors
 - Navigation works
 - UI displays correctly
 - Responsive design works
 
-✅ **API Working:**
+ **API Working:**
 - Health checks return JSON
 - CORS enabled (frontend can call backend)
 - Routes respond correctly
 
 ---
 
-## 📝 Next Steps
+## Next Steps
 
 Once demo is running:
 
