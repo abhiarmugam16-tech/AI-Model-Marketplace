@@ -4,11 +4,11 @@
 
 Before running the demo, ensure you have:
 
-- ✅ Node.js installed
-- ✅ Python installed
-- ⚠️ PostgreSQL (optional for basic demo)
-- ⚠️ Redis (optional for basic demo)
-- ⚠️ IPFS node or use public gateway
+-  Node.js installed
+-  Python installed
+-  PostgreSQL (optional for basic demo)
+-  Redis (optional for basic demo)
+-  IPFS node or use public gateway
 
 ## Quick Start (Minimal Setup)
 
