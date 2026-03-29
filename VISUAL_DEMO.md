@@ -1,6 +1,6 @@
-# 🎬 Visual Demo Guide - What You Should See
+#  Visual Demo Guide - What You Should See
 
-## 🌐 Main Application (http://localhost:5173)
+##  Main Application (http://localhost:5173)
 
 ### Home Page
 ```
@@ -61,7 +61,7 @@
 └─────────────────────────────────────────────────┘
 ```
 
-## 🔍 API Health Checks
+##  API Health Checks
 
 ### Backend API (http://localhost:3000/health)
 ```json
@@ -80,7 +80,7 @@
 }
 ```
 
-## ✅ Success Indicators
+##  Success Indicators
 
 ### Terminal Windows Should Show:
 
@@ -92,9 +92,9 @@
 
 **Terminal 2 - Backend:**
 ```
-✅ Web3 initialized
-✅ IPFS client initialized
-🚀 Server running on port 3000
+ Web3 initialized
+ IPFS client initialized
+ Server running on port 3000
 ```
 
 **Terminal 3 - Frontend:**
@@ -103,7 +103,7 @@
   ➜  Local:   http://localhost:5173/
 ```
 
-## 🎯 Testing Checklist
+##  Testing Checklist
 
 - [ ] Open http://localhost:5173 → See home page
 - [ ] Click "Marketplace" → See model listings
@@ -112,7 +112,7 @@
 - [ ] Test API → http://localhost:3000/health returns JSON
 - [ ] Test fingerprinting → http://localhost:5000/health returns JSON
 
-## 📱 Browser Console (F12)
+##  Browser Console (F12)
 
 **Should see:**
 - No red errors
@@ -125,7 +125,7 @@ GET http://localhost:3000/api/models
 GET http://localhost:3000/api/models/search/...
 ```
 
-## 🎨 UI Features to Test
+##  UI Features to Test
 
 1. **Navigation Bar**
    - Logo/Brand name
@@ -144,31 +144,31 @@ GET http://localhost:3000/api/models/search/...
    - Should adapt to mobile/tablet/desktop
    - Navigation should work on all sizes
 
-## 🚨 Common Issues & Solutions
+##  Common Issues & Solutions
 
 ### Frontend Shows "Cannot connect to backend"
-- ✅ Check backend is running (Terminal 2)
-- ✅ Check http://localhost:3000/health works
-- ✅ Check CORS settings in backend
+-  Check backend is running (Terminal 2)
+-  Check http://localhost:3000/health works
+-  Check CORS settings in backend
 
 ### Blank Page
-- ✅ Check browser console for errors
-- ✅ Verify npm install completed
-- ✅ Check if port 5173 is available
+-  Check browser console for errors
+-  Verify npm install completed
+-  Check if port 5173 is available
 
 ### API Returns 404
-- ✅ Check route exists in backend
-- ✅ Verify API URL is correct
-- ✅ Check backend logs for errors
+-  Check route exists in backend
+-  Verify API URL is correct
+-  Check backend logs for errors
 
-## 🎉 Demo Success!
+##  Demo Success!
 
 **You'll know it's working when:**
-- ✅ All 3 services show "Running" in status page
-- ✅ Frontend loads without errors
-- ✅ Can navigate between pages
-- ✅ API endpoints return data
-- ✅ UI looks professional and responsive
+-  All 3 services show "Running" in status page
+-  Frontend loads without errors
+-  Can navigate between pages
+-  API endpoints return data
+-  UI looks professional and responsive
 
 ---
 
